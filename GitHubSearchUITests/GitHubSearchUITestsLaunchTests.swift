@@ -9,7 +9,7 @@ import XCTest
 
 final class GitHubSearchUITestsLaunchTests: XCTestCase {
 
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
+    static override var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
 
