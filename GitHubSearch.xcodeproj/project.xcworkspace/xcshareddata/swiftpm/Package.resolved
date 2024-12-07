@@ -1,0 +1,15 @@
+{
+  "originHash" : "b81d3b18565a81878d14d96a2e28970f5f15fc48c271ded214c8c7ab237972ff",
+  "pins" : [
+    {
+      "identity" : "githubnetworking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/joseluissanchezporrogodoy/GitHubNetworking",
+      "state" : {
+        "revision" : "e4ab238b13bfce2458981df94a59abc2a167336e",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

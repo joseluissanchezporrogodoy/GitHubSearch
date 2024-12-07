@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EDBBA1B82D043B1500090D11 /* GitHubNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = EDBBA1B72D043B1500090D11 /* GitHubNetworking */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EDBBA19A2D0437F600090D11 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDBBA1B82D043B1500090D11 /* GitHubNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = GitHubSearch;
 			packageProductDependencies = (
+				EDBBA1B72D043B1500090D11 /* GitHubNetworking */,
 			);
 			productName = GitHubSearch;
 			productReference = EDBBA1882D0437F500090D11 /* GitHubSearch.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = EDBBA17F2D0437F500090D11;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EDBBA1B62D043B1500090D11 /* XCRemoteSwiftPackageReference "GitHubNetworking" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EDBBA1892D0437F500090D11 /* Products */;
 			projectDirPath = "";
@@ -591,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDBBA1B62D043B1500090D11 /* XCRemoteSwiftPackageReference "GitHubNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joseluissanchezporrogodoy/GitHubNetworking";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDBBA1B72D043B1500090D11 /* GitHubNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDBBA1B62D043B1500090D11 /* XCRemoteSwiftPackageReference "GitHubNetworking" */;
+			productName = GitHubNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDBBA1802D0437F500090D11 /* Project object */;
 }
