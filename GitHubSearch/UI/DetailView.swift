@@ -39,6 +39,7 @@ struct DetailView: View {
                     VStack(alignment: .leading) {
                         Text(repo.name)
                             .font(.headline)
+                            .foregroundColor(.black)
                         Text(repo.language ?? "Unknown Language")
                             .font(.subheadline)
                             .foregroundColor(.gray)
