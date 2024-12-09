@@ -8,11 +8,10 @@
 import SwiftUI
 import GitHubNetworking
 
-@Observable
-final class UserRepositoriesViewModel {
+final class UserRepositoriesViewModel: ObservableObject {
     // MARK: - Published Properties
-    var user: User?
-    var repositories: [Repository] = []
+    @Published var user: UserEntity?
+    @Published var repositories: [RepositoryEntity]
     var showAlert = false
     var errorMsg = ""
     var loading = false
@@ -21,9 +20,13 @@ final class UserRepositoriesViewModel {
     private let getRepositoriesUseCase: GetRepositoriesUseCaseProtocol
     // MARK: - Initialization
     init(getUserUseCase: GetUserUseCaseProtocol = GetUserUseCase(api: GitHubAPIClient()),
-         getRepositoriesUseCase: GetRepositoriesUseCaseProtocol = GetRepositoriesUseCase(api: GitHubAPIClient())) {
+         getRepositoriesUseCase: GetRepositoriesUseCaseProtocol = GetRepositoriesUseCase(api: GitHubAPIClient()),
+         user: UserEntity? = nil,
+         repositories: [RepositoryEntity] = []) {
         self.getUserUseCase = getUserUseCase
         self.getRepositoriesUseCase = getRepositoriesUseCase
+        self.user = user
+        self.repositories = repositories
     }
     // MARK: - Methods
     func fetchUserAndRepositories(for username: String) async {
