@@ -15,7 +15,7 @@ protocol GetUserUseCaseProtocol {
 /// - Parameter username: The username of the GitHub user to fetch.
 /// - Returns: A `User` object containing the user's information.
 /// - Throws: An error if the request fails.
-func execute(request: String) async throws -> User
+func execute(request: String) async throws -> UserEntity
 }
 
 /// A concrete implementation of `GetUserUseCaseProtocol`.
@@ -26,7 +26,7 @@ struct GetUserUseCase: GetUserUseCaseProtocol {
         self.api = api
     }
 
-    func execute(request: String) async throws -> User {
-        return try await api.fetchUser(username: request)
+    func execute(request: String) async throws -> UserEntity {
+        return try await api.fetchUser(username: request).mapToUserEntity()
     }
 }

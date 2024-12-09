@@ -13,10 +13,10 @@ struct GitHubSearchTests {
     // Test: Successful case when fetching a user and their repositories
     @Test func testFetchUserAndRepositoriesSuccess() async throws {
         // Arrange
-        let mockUser = User(login: "octocat", avatarUrl: "https://example.com/avatar.png", name: "The Octocat")
+        let mockUser = UserEntity(name: "The Octocat", login: "octocat", avatarUrl: "https://example.com/avatar.png")
         let mockRepositories = [
-            Repository(name: "Repo1", language: "Swift"),
-            Repository(name: "Repo2", language: "Python")
+            RepositoryEntity(name: "Repo1", language: "Swift"),
+            RepositoryEntity(name: "Repo2", language: "Python")
         ]
         let getUserUseCase = MockGetUserUseCase(result: .success(mockUser))
         let getRepositoriesUseCase = MockGetRepositoriesUseCase(result: .success(mockRepositories))
@@ -73,10 +73,10 @@ struct GitHubSearchTests {
     // Test: Validate the loading state during execution
     @Test func testLoadingState() async throws {
         // Arrange
-        let mockUser = User(login: "octocat", avatarUrl: "https://example.com/avatar.png", name: "The Octocat")
+        let mockUser = UserEntity(name: "The Octocat", login: "octocat", avatarUrl: "https://example.com/avatar.png")
         let mockRepositories = [
-            Repository(name: "Repo1", language: "Swift"),
-            Repository(name: "Repo2", language: "Python")
+            RepositoryEntity(name: "Repo1", language: "Swift"),
+            RepositoryEntity(name: "Repo2", language: "Python")
         ]
         let getUserUseCase = MockGetUserUseCase(result: .success(mockUser))
         let getRepositoriesUseCase = MockGetRepositoriesUseCase(result: .success(mockRepositories))

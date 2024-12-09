@@ -14,7 +14,7 @@ protocol GetRepositoriesUseCaseProtocol {
 /// - Parameter username: The username of the GitHub user.
 /// - Returns: An array of `Repository` objects.
 /// - Throws: An error if the request fails.
-func execute(request: String) async throws -> [Repository]
+    func execute(request: String) async throws -> [RepositoryEntity]
 }
 
 /// A concrete implementation of `GetRepositoriesUseCaseProtocol`.
@@ -25,7 +25,7 @@ struct GetRepositoriesUseCase: GetRepositoriesUseCaseProtocol {
         self.api = api
     }
 
-    func execute(request: String) async throws -> [Repository] {
-        return try await api.fetchRepositories(username: request)
+    func execute(request: String) async throws -> [RepositoryEntity] {
+        return try await api.fetchRepositories(username: request).map { $0.mapToRepositoryEntity() }
     }
 }

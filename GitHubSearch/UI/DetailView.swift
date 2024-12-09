@@ -71,3 +71,23 @@ struct DetailView: View {
         }
     }
 }
+
+#Preview {
+    let mockUser = UserEntity(
+        id: UUID(),
+        name: "Test User",
+        login: "testuser",
+        avatarUrl: "ttps://avatars.githubusercontent.com/u/14358318?v=4"
+    )
+    let mockRepositories = [
+        RepositoryEntity(name: "Repo1", language: "Swift"),
+        RepositoryEntity(name: "Repo1", language: "Swift"),
+        RepositoryEntity(name: "Repo1", language: "Swift"),
+        RepositoryEntity(name: "Repo1", language: "Swift")
+    ]
+    let viewModel = UserRepositoriesViewModel(
+            user: mockUser,
+            repositories: mockRepositories
+    )
+    DetailView(viewModel: viewModel)
+}

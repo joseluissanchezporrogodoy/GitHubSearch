@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import GitHubNetworking
 @testable import GitHubSearch
 
 struct MockGetUserUseCase: GetUserUseCaseProtocol {
-    var result: Result<User, Error>
-    func execute(request: String) async throws -> User {
+    var result: Result<UserEntity, Error>
+    func execute(request: String) async throws -> UserEntity {
         switch result {
         case .success(let user):
             return user
@@ -22,8 +21,8 @@ struct MockGetUserUseCase: GetUserUseCaseProtocol {
 }
 
 struct MockGetRepositoriesUseCase: GetRepositoriesUseCaseProtocol {
-    var result: Result<[Repository], Error>
-    func execute(request: String) async throws -> [Repository] {
+    var result: Result<[RepositoryEntity], Error>
+    func execute(request: String) async throws -> [RepositoryEntity] {
         switch result {
         case .success(let repositories):
             return repositories
