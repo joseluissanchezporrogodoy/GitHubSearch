@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/joseluissanchezporrogodoy/GitHubNetworking",
       "state" : {
-        "revision" : "e4ab238b13bfce2458981df94a59abc2a167336e",
-        "version" : "1.0.0"
+        "revision" : "050fa79bcba247efb3654f1f5fea02af4876b23b",
+        "version" : "1.0.1"
       }
     }
   ],
