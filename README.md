@@ -58,20 +58,20 @@ The app is designed with the **MVVM** architecture and follows **SOLID** princip
 ## Screenshots
 
 Search Screen
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-07 at 11 12 37](https://github.com/user-attachments/assets/1b368627-ec73-42de-ac11-a9a21960ae90)
 
+<img src="https://github.com/user-attachments/assets/9d35a81a-8976-4a32-be1d-935d0390626b" alt="Search Screen" width="400"/>
 
 Detail Screen
 
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-07 at 11 13 22](https://github.com/user-attachments/assets/97335dc8-0502-421a-9ad7-70fc27ab4e9a)
+<img src="https://github.com/user-attachments/assets/c4de938b-6fc8-4bf8-8070-310b2c54280a" alt="Detail Screen" width="400"/>
 
 User not found Alert
 
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-07 at 11 12 57](https://github.com/user-attachments/assets/b0d11333-ebfa-4965-a6be-ae8de991b9a0)
+<img src="https://github.com/user-attachments/assets/e4fbf98d-789c-4699-af59-2f3b7bfce768" alt="User Not Found Alert" width="400"/>
 
 Offline Warning
 
-![IMG_408D72FF0082-1](https://github.com/user-attachments/assets/c8cb8b3d-dd05-4d34-b468-1339cfc489db)
+<img src="https://github.com/user-attachments/assets/c8cb8b3d-dd05-4d34-b468-1339cfc489db" alt="Offline Warning" width="400"/>
 
 ## License
 
