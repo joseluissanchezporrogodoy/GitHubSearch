@@ -43,11 +43,13 @@ struct DetailView: View {
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
 #if os(iOS)
                     .listRowBackground(
                                Color(UIColor.secondarySystemGroupedBackground)
                                    .overlay(alignment: .bottom) {
                                        Divider()
+                                           .frame(maxWidth: .infinity)
                                    }
                            )
 #endif
@@ -55,8 +57,10 @@ struct DetailView: View {
                     .focused($focusedItem, equals: repo.name)
                 }
                 .listStyle(PlainListStyle())
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
             }
-
+            .frame(maxWidth: .infinity)
 #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.clear, for: .navigationBar) // Barra transparente
