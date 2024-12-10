@@ -82,7 +82,7 @@ struct DetailView: View {
         id: UUID(),
         name: "Test User",
         login: "testuser",
-        avatarUrl: "ttps://avatars.githubusercontent.com/u/14358318?v=4"
+        avatarUrl: "https://avatars.githubusercontent.com/u/14358318?v=4"
     )
     let mockRepositories = [
         RepositoryEntity(name: "Repo1", language: "Swift"),
