@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State var viewModel = UserRepositoriesViewModel()
+    @StateObject var viewModel = UserRepositoriesViewModel()
     @State private var username: String = ""
     @State private var showDetails: Bool = false
 #if os(iOS)
@@ -35,6 +35,7 @@ struct SearchView: View {
                     .textInputAutocapitalization(.never)
                     .autocapitalization(.none)
                     .padding(.horizontal, 20)
+                    .accessibilityIdentifier("Enter GitHub username")
 #elseif os(tvOS)
                 TextField("Username", text: $username)
                     .textFieldStyle(DefaultTextFieldStyle())

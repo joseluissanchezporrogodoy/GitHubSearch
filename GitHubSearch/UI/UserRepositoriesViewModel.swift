@@ -12,9 +12,9 @@ final class UserRepositoriesViewModel: ObservableObject {
     // MARK: - Published Properties
     @Published var user: UserEntity?
     @Published var repositories: [RepositoryEntity]
-    var showAlert = false
-    var errorMsg = ""
-    var loading = false
+    @Published var showAlert = false
+    @Published var errorMsg = ""
+    @Published var loading = false
     // MARK: - Dependencies
     private let getUserUseCase: GetUserUseCaseProtocol
     private let getRepositoriesUseCase: GetRepositoriesUseCaseProtocol

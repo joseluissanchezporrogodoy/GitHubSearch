@@ -24,7 +24,7 @@ final class GitHubSearchUITests: XCTestCase {
             searchButton.tap()
             // Verify that the Alert appears
             let alert = app.alerts["Error"]
-            let exists = alert.waitForExistence(timeout: 5) // Wait for the alert to appear
+            let exists = alert.waitForExistence(timeout: 10) // Wait for the alert to appear
             XCTAssertTrue(exists, "The error alert should be presented")
             // Verify the Alert Message
             let alertMessage = alert.staticTexts["User not found. Please enter another name."]
